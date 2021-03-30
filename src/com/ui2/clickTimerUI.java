@@ -26,24 +26,21 @@ public class clickTimerUI {
         save.timer = new Timer(20, new ActionListener() { //timer module
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (save.startTime < 0) { //if time reaches 0, stop time so it doesn't go to negative int
-                    save.startTime = System.currentTimeMillis(); //use system time
+                if (save.startTime < 0) {
+                    save.startTime = System.currentTimeMillis();
                 }
-                long now = System.currentTimeMillis(); //use system time
+                long now = System.currentTimeMillis();
                 long clockTime = now - save.startTime;
-                if (clockTime >= save.duration) { //whenever clock reaches 0, run command under:
+                if (clockTime >= save.duration) {
                     clockTime = save.duration;
-                    save.timer.stop(); //stop the timer from going to the negatives
-
-                    //replace with diff label
-                    hack.setEnabled(false); //disables hack button as timer went to 0
-                    reset.setEnabled(true); //enable reset button to play again
-
+                    save.timer.stop();
+                    clickerTimerButton.setEnabled(false);
+                    clickerResetButton.setEnabled(true);
+                    System.out.println("time ended");
                 }
-                SimpleDateFormat df = new SimpleDateFormat("mm:ss.SSS"); //format of time shown
+                SimpleDateFormat df = new SimpleDateFormat("mm:ss.SSS");
 
-                //replace with diff label
-                time.setText(df.format(save.duration - clockTime)); //set time component to destination
+                timerDisplayLabel.setText(df.format(save.duration - clockTime));
             }
         });
         save.timer.setInitialDelay(save.delay); //set the delay
@@ -51,13 +48,24 @@ public class clickTimerUI {
         clickerTimerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                save.count2++;
+                clickerScoreLabel.setText("" + save.count2);
 
+                if (!save.timer.isRunning()) {
+                    save.startTime = -1;
+                    save.timer.start();
+                    System.out.println("time started");
+                }
             }
         });
         clickerResetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                System.out.println("person has scored " + save.count2 + " points");
+                save.count2 = 0;
+                clickerScoreLabel.setText("" + save.count2);
+                clickerTimerButton.setEnabled(true);
+                System.out.println("counter2 reset");
             }
         });
     }
