@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.ui2.clickTimerUI">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="23" y="15" width="430" height="335"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="14e43" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="e815f" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="15" left="15" bottom="15" right="15"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="56572" class="javax.swing.JButton" binding="clickerTimerButton" default-binding="true">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Fira Code Light" size="18"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="clickerTimer"/>
+                </properties>
+              </component>
+              <grid id="8dffc" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="5af94" class="javax.swing.JLabel" binding="titleLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Fira Code Light" size="48" style="1"/>
+                      <horizontalAlignment value="2"/>
+                      <horizontalTextPosition value="0"/>
+                      <text value="clickerTimer"/>
+                      <verticalAlignment value="3"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                  <component id="45adc" class="javax.swing.JLabel" binding="creditsLabel">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Fira Code Light" size="12"/>
+                      <text value="by udu3324"/>
+                      <verticalAlignment value="1"/>
+                      <verticalTextPosition value="1"/>
+                    </properties>
+                  </component>
+                  <component id="9551e" class="javax.swing.JLabel" binding="versionLabel">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="187" height="20"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <font name="Fira Code Light" size="12"/>
+                      <horizontalAlignment value="4"/>
+                      <text value="v1"/>
+                      <verticalAlignment value="1"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="1916d" class="javax.swing.JLabel" binding="counterLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="187" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Fira Code Light" size="11"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="[ Highest Score | 0 ] [ Time | 0 ] [ Delay | 0 ]"/>
+                  <verticalAlignment value="0"/>
+                </properties>
+              </component>
+              <component id="4d9ab" class="javax.swing.JButton" binding="clickerResetButton">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Fira Code Light" size="18"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="clickerReset"/>
+                </properties>
+              </component>
+              <component id="3216" class="javax.swing.JLabel" binding="clickerScoreLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="187" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Fira Code Light" size="48"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="0"/>
+                  <verticalAlignment value="0"/>
+                </properties>
+              </component>
+              <component id="94b25" class="javax.swing.JLabel" binding="timerDisplayLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="187" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="Fira Code Light" size="18"/>
+                  <horizontalAlignment value="0"/>
+                  <text value="00:00.000"/>
+                  <verticalAlignment value="0"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
