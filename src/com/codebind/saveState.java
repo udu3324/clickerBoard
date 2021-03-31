@@ -14,7 +14,6 @@ public class saveState {
     public int count2 = 0;
 
     public Timer timer;
-    public int delay = 0;
     public long duration = 10000;
     public long startTime = -1;
 }

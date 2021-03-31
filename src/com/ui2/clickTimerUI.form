@@ -91,7 +91,7 @@
                 <properties>
                   <font name="Fira Code Light" size="11"/>
                   <horizontalAlignment value="0"/>
-                  <text value="[ Highest Score | 0 ] [ Time | 0 ] [ Delay | 0 ]"/>
+                  <text value="[ Highest Score | 0 ] [ Initial Time | 0 ] "/>
                   <verticalAlignment value="0"/>
                 </properties>
               </component>

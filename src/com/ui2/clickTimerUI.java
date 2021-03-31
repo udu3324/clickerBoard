@@ -22,8 +22,10 @@ public class clickTimerUI {
         saveState save = new saveState();
 
         versionLabel.setText("v" + save.version);
+        //todo
+        timerDisplayLabel.setText("string that turns format of int to mm:ss.SSS");
 
-        save.timer = new Timer(20, new ActionListener() { //timer module
+        save.timer = new Timer(0, new ActionListener() { //timer module
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (save.startTime < 0) {
@@ -43,7 +45,6 @@ public class clickTimerUI {
                 timerDisplayLabel.setText(df.format(save.duration - clockTime));
             }
         });
-        save.timer.setInitialDelay(save.delay); //set the delay
 
         clickerTimerButton.addActionListener(new ActionListener() {
             @Override
