@@ -22,13 +22,6 @@ public class Main {
 
         System.out.println("saveState loaded");
         System.out.println("startUI loaded");
-        //startUI start
-        JFrame startUI = new JFrame("startUI");
-        startUI.setContentPane(new startUI() .rootPanel);
-        startUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        startUI.pack();
-        startUI.setLocationRelativeTo(null);
-        startUI.setVisible(true);
 
         //info dialog (please don't remove)
         JOptionPane.showMessageDialog(null,
@@ -36,5 +29,13 @@ public class Main {
                 "ClickerBoard",
                 JOptionPane.INFORMATION_MESSAGE,
                 null);
+
+        //startUI start
+        JFrame startUI = new JFrame("startUI");
+        startUI.setContentPane(new startUI() .rootPanel);
+        startUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        startUI.pack();
+        startUI.setLocationRelativeTo(null);
+        startUI.setVisible(true);
     }
 }
