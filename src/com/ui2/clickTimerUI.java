@@ -25,7 +25,7 @@ public class clickTimerUI {
         //todo
         timerDisplayLabel.setText("string that turns format of int to mm:ss.SSS");
 
-        save.timer = new Timer(0, new ActionListener() { //timer module
+        save.timer = new Timer(0, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (save.startTime < 0) {
