@@ -38,7 +38,7 @@ public class clickTimerUI {
                     save.timer.stop();
                     clickerTimerButton.setEnabled(false);
                     clickerResetButton.setEnabled(true);
-                    System.out.println("time ended");
+                    System.out.println("time ended.");
                 }
                 SimpleDateFormat df = new SimpleDateFormat("mm:ss.SSS");
 
