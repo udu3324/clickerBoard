@@ -63,9 +63,20 @@
               </component>
             </children>
           </grid>
+          <component id="c90dc" class="javax.swing.JButton" binding="settingInfoButton">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <focusable value="false"/>
+              <font name="Fira Code Light" size="18"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Settings and Information"/>
+            </properties>
+          </component>
           <component id="e4c39" class="javax.swing.JButton" binding="clickerCounterButton" default-binding="true">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <focusable value="false"/>
@@ -76,24 +87,13 @@
           </component>
           <component id="b7434" class="javax.swing.JButton" binding="clickerTimerButton">
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <focusable value="false"/>
               <font name="Fira Code Light" size="18"/>
               <horizontalTextPosition value="0"/>
               <text value="clickerTimer"/>
-            </properties>
-          </component>
-          <component id="c90dc" class="javax.swing.JButton" binding="settingInfoButton">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <focusable value="false"/>
-              <font name="Fira Code Light" size="18"/>
-              <horizontalTextPosition value="0"/>
-              <text value="Settings and Information"/>
             </properties>
           </component>
         </children>

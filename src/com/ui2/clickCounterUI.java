@@ -14,6 +14,7 @@ public class clickCounterUI {
     private JLabel titleLabel;
     private JLabel counterLabel;
     private JButton clickerReset;
+    private JLabel infoLabel;
 
     public clickCounterUI() {
 
@@ -39,6 +40,12 @@ public class clickCounterUI {
         clickerReset.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //operation to set highestCount0 only if it is actually the highest number count
+                if (save.count > save.highestCount0) {
+                    save.highestCount0 = save.count;
+                    infoLabel.setText("[ Highest Score | " + save.highestCount0 + " ]");
+                    System.out.println("great job! your new highest score is " + save.highestCount0);
+                }
                 save.count = 0;
                 counterLabel.setText("" + save.count);
                 JOptionPane.showMessageDialog(null,
