@@ -3,6 +3,8 @@ package com.codebind;
 import javax.swing.*;
 import com.ui2.*;
 
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
         saveState save = new saveState(); //load
@@ -30,8 +32,8 @@ public class Main {
                 JOptionPane.INFORMATION_MESSAGE,
                 null);
 
-        //startUI start
         JFrame startUI = new JFrame("startUI");
+        startUI.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("logo.png")));
         startUI.setContentPane(new startUI() .rootPanel);
         startUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         startUI.pack();

@@ -5,7 +5,7 @@ import javax.swing.*;
 public class saveState {
 
     //version format: #major.#minor.#patch [A]describe beta, alpha, patch, release, etc.
-    public String version = "1.7.1 Beta";
+    public String version = "1.7.3 Beta";
 
     //clickerCounter
     public int count = 0;

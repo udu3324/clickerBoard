@@ -3,6 +3,8 @@ package com.ui2;
 import javax.swing.*;
 import com.codebind.*;
 
+import java.awt.*;
+
 public class startUI {
 
     public JPanel rootPanel;
@@ -26,6 +28,7 @@ public class startUI {
 
         //clickCounterUI start (should only happen once)
         JFrame clickCounterUI = new JFrame("clickCounterUI");
+        clickCounterUI.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("logo.png")));
         clickCounterUI.setContentPane(new clickCounterUI() .rootPanel);
         clickCounterUI.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         clickCounterUI.pack();
@@ -35,6 +38,7 @@ public class startUI {
 
         //clickTimerUI start (should only happen once)
         JFrame clickTimerUI = new JFrame("clickTimerUI");
+        clickTimerUI.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("logo.png")));
         clickTimerUI.setContentPane(new clickTimerUI() .rootPanel);
         clickTimerUI.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         clickTimerUI.pack();
@@ -43,6 +47,7 @@ public class startUI {
 
         //settingsUI start (should only happen once)
         JFrame settingsUI = new JFrame("settingsUI");
+        settingsUI.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("logo.png")));
         settingsUI.setContentPane(new settingsUI() .rootPanel);
         settingsUI.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         settingsUI.pack();
