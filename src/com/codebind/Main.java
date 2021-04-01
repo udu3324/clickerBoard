@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
-        saveState save = new saveState(); //load
+        saveState save = new saveState();
 
         System.out.println("Hello, World!");
         System.out.println("ClickerBoard v" + save.version + " by");
