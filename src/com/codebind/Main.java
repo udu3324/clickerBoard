@@ -5,16 +5,27 @@ import com.ui2.*;
 
 import java.awt.*;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException, InterruptedException {
-        //create config and save
+        //create and write config and save
         {
             File myObj = new File("clickerConfig.txt");
             try {
                 if (myObj.createNewFile()) {
                     System.out.println("File created: " + myObj.getName());
+                    //writer
+                    try {
+                        FileWriter myWriter = new FileWriter("clickerConfig.txt");
+                        myWriter.write("placeholder");
+                        myWriter.close();
+                        System.out.println("Successfully wrote to the file.");
+                    } catch (IOException e) {
+                        System.out.println("An error occurred.");
+                        e.printStackTrace();
+                    }
                 }
             } catch (IOException ioException) {
                 ioException.printStackTrace();
@@ -24,7 +35,17 @@ public class Main {
             File myObj2 = new File("clickerSaves.txt");
             try {
                 if (myObj2.createNewFile()) {
-                    System.out.println("File created: " + myObj2.getName() + "\nyou will only see this one time on startup, unless if you did something.");
+                    System.out.println("File created: " + myObj2.getName());
+                    //writer
+                    try {
+                        FileWriter myWriter = new FileWriter("clickerSaves.txt");
+                        myWriter.write("placeholder");
+                        myWriter.close();
+                        System.out.println("Successfully wrote to the file." + "\nyou will only see this one time on startup, unless if you did something.");
+                    } catch (IOException e) {
+                        System.out.println("An error occurred.");
+                        e.printStackTrace();
+                    }
                 }
             } catch (IOException ioException) {
                 ioException.printStackTrace();
