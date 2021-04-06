@@ -4,18 +4,19 @@ import javax.swing.*;
 
 public class saveState {
 
+    //these are default values. please do not edit them.
     //version format: #major.#minor.#patch [A]describe beta, alpha, patch, release, etc.
-    public String version = "1.7.3 Beta";
+    public String version = "0.8.1 Beta-Test"; //not saving value or editable
 
     //clickerCounter
-    public int count = 0;
-    public int highestCount0 = 0;
+    public int count = 0;  //not editable or saved
+    public int highestCount0 = 0; //saves in save but not editable
 
     //clickerTimer
-    public int count2 = 0;
-    public int highestCount = 0;
+    public int count2 = 0; //not editable or saved
+    public int highestCount = 0; //saves in save but not editable
 
     public Timer timer;
-    public long duration = 10000;
-    public long startTime = -1;
+    public long duration = 10000; //can be editable in config
+    public long startTime = -1; //not editable or saved
 }

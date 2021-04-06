@@ -63,6 +63,7 @@ public class clickTimerUI {
             save.count2 = 0;
             clickerScoreLabel.setText("" + save.count2);
             clickerTimerButton.setEnabled(true);
+            clickerResetButton.setEnabled(false);
             System.out.println("counter2 reset");
         });
     }

@@ -71,7 +71,7 @@
               <focusable value="false"/>
               <font name="Fira Code Light" size="18"/>
               <horizontalTextPosition value="0"/>
-              <text value="Settings and Information"/>
+              <text value="clickerConfig"/>
             </properties>
           </component>
           <component id="e4c39" class="javax.swing.JButton" binding="clickerCounterButton" default-binding="true">

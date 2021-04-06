@@ -20,7 +20,6 @@ public class startUI {
     int toggle3 = 1;
 
     public startUI() {
-
         saveState save = new saveState(); //load
 
         //change version to current one in saveState
@@ -29,8 +28,8 @@ public class startUI {
         //clickCounterUI start (should only happen once)
         JFrame clickCounterUI = new JFrame("clickCounterUI");
         clickCounterUI.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("logo.png")));
-        clickCounterUI.setContentPane(new clickCounterUI() .rootPanel);
-        clickCounterUI.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        clickCounterUI.setContentPane(new clickCounterUI().rootPanel);
+        clickCounterUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         clickCounterUI.pack();
         clickCounterUI.setLocationRelativeTo(null);
         clickCounterUI.setVisible(false);
@@ -39,28 +38,31 @@ public class startUI {
         //clickTimerUI start (should only happen once)
         JFrame clickTimerUI = new JFrame("clickTimerUI");
         clickTimerUI.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("logo.png")));
-        clickTimerUI.setContentPane(new clickTimerUI() .rootPanel);
-        clickTimerUI.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        clickTimerUI.setContentPane(new clickTimerUI().rootPanel);
+        clickTimerUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         clickTimerUI.pack();
         clickTimerUI.setLocationRelativeTo(null);
         System.out.println("clickTimerUI loaded");
 
-        //settingsUI start (should only happen once)
-        JFrame settingsUI = new JFrame("settingsUI");
-        settingsUI.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("logo.png")));
-        settingsUI.setContentPane(new settingsUI() .rootPanel);
-        settingsUI.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        settingsUI.pack();
-        settingsUI.setLocationRelativeTo(null);
-        System.out.println("settingsUI loaded");
+        //clickerConfigUI start (should only happen once)
+        JFrame clickerConfigUI = new JFrame("clickerConfigUI");
+        clickerConfigUI.setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("logo.png")));
+        clickerConfigUI.setContentPane(new clickerConfigUI().rootPanel);
+        clickerConfigUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        clickerConfigUI.pack();
+        clickerConfigUI.setLocationRelativeTo(null);
+        System.out.println("clickerConfigUI loaded");
 
         clickerCounterButton.addActionListener(e -> {
             //toggle visible code
             if (toggle1 == 0) {
-                clickCounterUI.setVisible(false);
-                System.out.println("clickCounterUI.setVisible(false);");
-                toggle1 = 1;
-            }   else {
+                System.out.println("sorry, clickerBoard is a launcher used to launch one program at a time. If you want to launch something else, restart clickerBoard");
+                JOptionPane.showMessageDialog(null,
+                        "sorry, clickerBoard is a launcher used to launch one program at a time. \nIf you want to launch something else, restart clickerBoard",
+                        "error",
+                        JOptionPane.INFORMATION_MESSAGE,
+                        null);
+            } else {
                 clickCounterUI.setVisible(true);
                 System.out.println("clickCounterUI.setVisible(true);");
                 toggle1 = 0;
@@ -69,10 +71,13 @@ public class startUI {
         clickerTimerButton.addActionListener(e -> {
             //toggle visible code
             if (toggle2 == 0) {
-                clickTimerUI.setVisible(false);
-                System.out.println("clickTimerUI.setVisible(false);");
-                toggle2 = 1;
-            }   else {
+                System.out.println("sorry, clickerBoard is a launcher used to launch one program at a time. If you want to launch something else, restart clickerBoard");
+                JOptionPane.showMessageDialog(null,
+                        "sorry, clickerBoard is a launcher used to launch one program at a time. \nIf you want to launch something else, restart clickerBoard",
+                        "error",
+                        JOptionPane.INFORMATION_MESSAGE,
+                        null);
+            } else {
                 clickTimerUI.setVisible(true);
                 System.out.println("clickTimerUI.setVisible(true);");
                 toggle2 = 0;
@@ -81,12 +86,15 @@ public class startUI {
         settingInfoButton.addActionListener(e -> {
             //toggle visible code
             if (toggle3 == 0) {
-                settingsUI.setVisible(false);
-                System.out.println("settingsUI.setVisible(false);");
-                toggle3 = 1;
-            }   else {
-                settingsUI.setVisible(true);
-                System.out.println("settingsUI.setVisible(true);");
+                System.out.println("sorry, clickerBoard is a launcher used to launch one program at a time. If you want to launch something else, restart clickerBoard");
+                JOptionPane.showMessageDialog(null,
+                        "sorry, clickerBoard is a launcher used to launch one program at a time. \nIf you want to launch something else, restart clickerBoard",
+                        "error",
+                        JOptionPane.INFORMATION_MESSAGE,
+                        null);
+            } else {
+                clickerConfigUI.setVisible(true);
+                System.out.println("clickerConfigUI.setVisible(true);");
                 toggle3 = 0;
             }
         });
