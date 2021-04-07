@@ -6,19 +6,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class saveState {
-    public String one = "";
-    public String two = "";
-    public String three = "";
-    public String four = "";
-    public String five = "";
-    public String six = "";
-    public String seven = "";
-    public String eight = "";
-    public String nine = "";
-    public String ten = "";
-    public String eleven = "";
-    public String twelve = "";
-
     File obj = new File("clickerConfig.txt");
     Scanner s;
     {
@@ -62,18 +49,4 @@ public class saveState {
     //1 = true | 0 = false
     //this saves auto highercount into save txt
     public int saveClickerTimerAuto = 1; //can be editable in config (can be editable)
-    {
-        System.out.println(one);
-        System.out.println(two);
-        System.out.println(three);
-        System.out.println(four);
-        System.out.println(five);
-        System.out.println(six);
-        System.out.println(seven);
-        System.out.println(eight);
-        System.out.println(nine);
-        System.out.println(ten);
-        System.out.println(eleven);
-        System.out.println(twelve);
-    }
 }
