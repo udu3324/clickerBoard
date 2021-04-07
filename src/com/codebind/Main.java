@@ -4,6 +4,7 @@ import javax.swing.*;
 import com.ui2.*;
 
 import java.awt.*;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,9 +19,20 @@ public class Main {
                     System.out.println("File created: " + myObj.getName());
                     //writer
                     try {
-                        FileWriter myWriter = new FileWriter("clickerConfig.txt");
-                        myWriter.write("placeholder");
-                        myWriter.close();
+                        BufferedWriter out = new BufferedWriter(new FileWriter(myObj, true));
+                        out.write("# clickerBoard is by _._#3324/udu3324 \n");
+                        out.write("# use clickerConfig to edit values safer \n");
+                        out.write("# read docs if you need help editing values \n");
+                        out.write("# only do things like edit integers! file is sensitive\n");
+                        out.write("# if something wrong happens, delete the file and run clickerBoard again\n");
+                        out.write("\n");
+                        out.write("# 1 = true | 0 = false \n");
+                        out.write("saveClickerTimerAuto = 1 \n");
+                        out.write("\n");
+                        out.write("# duration is in milliseconds \n");
+                        out.write("duration = 10000 \n");
+                        out.write("\n");
+                        out.close();
                         System.out.println("Successfully wrote to the file.");
                     } catch (IOException e) {
                         System.out.println("An error occurred.");
@@ -31,6 +43,7 @@ public class Main {
                 ioException.printStackTrace();
             }
         }
+
         {
             File myObj2 = new File("clickerSaves.txt");
             try {
@@ -38,9 +51,12 @@ public class Main {
                     System.out.println("File created: " + myObj2.getName());
                     //writer
                     try {
-                        FileWriter myWriter = new FileWriter("clickerSaves.txt");
-                        myWriter.write("placeholder");
-                        myWriter.close();
+                        BufferedWriter out = new BufferedWriter(new FileWriter(myObj2, true));
+                        out.write("# clickerBoard is by _._#3324/udu3324 \n");
+                        out.write("# this file is to see your automatically saved scores. \n");
+                        out.write("# it is safe to edit, but editing scores is bad and mean >:( \n");
+                        out.write("\n");
+                        out.close();
                         System.out.println("Successfully wrote to the file." + "\nyou will only see this one time on startup, unless if you did something.");
                     } catch (IOException e) {
                         System.out.println("An error occurred.");
