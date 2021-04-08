@@ -4,6 +4,7 @@ import javax.swing.*;
 import com.codebind.*;
 
 import java.awt.*;
+import java.io.FileNotFoundException;
 
 public class startUI {
 
@@ -19,7 +20,7 @@ public class startUI {
     int toggle2 = 1;
     int toggle3 = 1;
 
-    public startUI() {
+    public startUI() throws FileNotFoundException {
         saveState save = new saveState(); //load
 
         //change version to current one in saveState

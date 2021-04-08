@@ -3,6 +3,7 @@ package com.ui2;
 import com.codebind.*;
 
 import javax.swing.*;
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 
 public class clickTimerUI {
@@ -16,7 +17,7 @@ public class clickTimerUI {
     private JLabel infoLabel;
     private JLabel creditsLabel;
 
-    public clickTimerUI() {
+    public clickTimerUI() throws FileNotFoundException {
         saveState save = new saveState();
         SimpleDateFormat df = new SimpleDateFormat("mm:ss.SSS");
 

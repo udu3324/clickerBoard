@@ -70,9 +70,9 @@
             <properties>
               <focusable value="false"/>
               <font name="Fira Code Light" size="18"/>
-              <horizontalAlignment value="2"/>
+              <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
-              <text value="Auto-Save Scores (true)"/>
+              <text value="awaiting change"/>
             </properties>
           </component>
           <component id="57326" class="javax.swing.JComboBox" binding="comboBoxTime">
@@ -99,7 +99,7 @@
             <properties>
               <focusable value="false"/>
               <font name="Fira Code Light" size="18"/>
-              <horizontalAlignment value="2"/>
+              <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <text value="Documentation/Wiki"/>
             </properties>
@@ -111,7 +111,7 @@
             <properties>
               <focusable value="false"/>
               <font name="Fira Code Light" size="18"/>
-              <horizontalAlignment value="2"/>
+              <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <text value="Save Configuration + Restart"/>
             </properties>

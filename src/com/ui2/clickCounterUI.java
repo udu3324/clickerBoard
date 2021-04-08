@@ -5,6 +5,7 @@ import com.codebind.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 
 public class clickCounterUI {
     public JPanel rootPanel;
@@ -16,7 +17,7 @@ public class clickCounterUI {
     private JButton clickerReset;
     private JLabel infoLabel;
 
-    public clickCounterUI() {
+    public clickCounterUI() throws FileNotFoundException {
 
         saveState save = new saveState(); //load
 

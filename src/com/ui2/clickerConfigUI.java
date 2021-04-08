@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -19,16 +20,26 @@ public class clickerConfigUI {
     private JButton autoSaveToggle;
     private JButton clickerRefer;
 
-    public clickerConfigUI() {
+    public clickerConfigUI() throws FileNotFoundException {
         saveState save = new saveState(); //load
 
         //change version to current one in saveState
         versionLabel.setText("v" + save.version);
 
+        //change auto save label to right one in config
+        if (save.saveClickerTimerAuto == 1) {
+            autoSaveToggle.setText("Auto-Save Scores (true)");
+            System.out.println("save.saveClickerTimerAuto = true");
+        }
+        if (save.saveClickerTimerAuto == 0) {
+            autoSaveToggle.setText("Auto-Save Scores (false)");
+            System.out.println("save.saveClickerTimerAuto = false");;
+        }
+
         saveConfig.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                System.exit(0);
             }
         });
         clickerRefer.addActionListener(new ActionListener() {
