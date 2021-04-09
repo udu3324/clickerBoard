@@ -17,17 +17,20 @@ public class Main {
                     //writer
                     try {
                         BufferedWriter out = new BufferedWriter(new FileWriter(myObj, true));
-                        out.write("# clickerBoard is by _._#3324/udu3324 \n");
-                        out.write("# use clickerConfig to edit values safer \n");
-                        out.write("# read docs if you need help editing values \n");
-                        out.write("# only do things like edit integers! file is sensitive\n");
-                        out.write("# if something wrong happens, delete the file and run clickerBoard again\n");
+                        out.write("# clickerBoard is by _._#3324/udu3324. \n");
+                        out.write("# use clickerConfig to edit values safer. \n");
+                        out.write("# read docs if you need help editing values. \n");
+                        out.write("# only do things like edit integers! file is sensitive.\n");
+                        out.write("# if something wrong happens, delete the file and run clickerBoard again.\n");
                         out.write("\n");
                         out.write("# 1 = true | 0 = false \n");
                         out.write("saveClickerTimerAuto = 1 \n");
                         out.write("\n");
                         out.write("# duration is in milliseconds \n");
                         out.write("duration = 10000 \n");
+                        out.write("\n");
+                        out.write("clickerTimer High Score = 0 \n");
+                        out.write("clickerCounter High Score = 0 \n");
                         out.write("\n");
                         out.close();
                         System.out.println("Successfully wrote to the file.");
@@ -49,7 +52,7 @@ public class Main {
                     //writer
                     try {
                         BufferedWriter out = new BufferedWriter(new FileWriter(myObj2, true));
-                        out.write("# clickerBoard is by _._#3324/udu3324 \n");
+                        out.write("# clickerBoard is by _._#3324/udu3324. \n");
                         out.write("# this file is to see your automatically saved scores. \n");
                         out.write("# it is safe to edit, but editing scores is bad and mean >:( \n");
                         out.write("\n");
@@ -91,7 +94,13 @@ public class Main {
         //info dialog (please don't remove)
         Thread.sleep(500);
         JOptionPane.showMessageDialog(null,
-                "Thank you for using ClickerBoard. (by udu3324) \n\nIf you appreciate it a lot, contribute by donating or contributing to the code. \n(suggest new features, report program issues, creating pull requests, etc.) \nIf you want to know more about ClickerBoard or how it works, go to the \nwiki page on the github repository.\n\nThis is a Beta Tester Version.\nPlease report all bugs and glitches!!!",
+                "Thank you for using ClickerBoard. (by udu3324) \n\n" +
+                        "If you appreciate it a lot, contribute by donating or contributing to the code. \n" +
+                        "(suggest new features, report program issues, creating pull requests, etc.) \n" +
+                        "If you want to know more about ClickerBoard or how it works, go to the \n" +
+                        "wiki page on the github repository.\n\n" +
+                        "This is a Beta Tester Version.\n" +
+                        "Please report all bugs and glitches!!!",
                 "ClickerBoard",
                 JOptionPane.INFORMATION_MESSAGE,
                 null);

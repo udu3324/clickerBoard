@@ -18,8 +18,11 @@ public class saveState {
     public String eight = s.nextLine (); //toggle auto
     public String nine = s.nextLine ();
     public String ten = s.nextLine ();
-    public String eleven = s.nextLine (); //duration
+    public String eleven = s.nextLine (); //duration //clickerTimer
     public String twelve = s.nextLine ();
+    public String thirteen = s.nextLine (); //clickerTimer
+    public String fourteen = s.nextLine (); //clickerCounter
+    public String fifteen = s.nextLine ();
 
     //converter 1
     String convert = eight.replaceAll("([a-z])", "");
@@ -35,17 +38,31 @@ public class saveState {
     String convert2222 = convert222.replaceAll("([ ])", "");
     int converted2 = Integer.parseInt(convert2222);
 
+    //converter 3
+    String conve = thirteen.replaceAll("([a-z])", "");
+    String convert33 = conve.replaceAll("([A-Z])", "");
+    String convert333 = convert33.replaceAll("([=])", "");
+    String convert3333 = convert333.replaceAll("([ ])", "");
+    int converted3 = Integer.parseInt(convert3333);
+
+    //converter 4
+    String conv = fourteen.replaceAll("([a-z])", "");
+    String convert44 = conv.replaceAll("([A-Z])", "");
+    String convert444 = convert44.replaceAll("([=])", "");
+    String convert4444 = convert444.replaceAll("([ ])", "");
+    int converted4 = Integer.parseInt(convert4444);
+
     //these are default values. please do not edit them.
     //version format: #major.#minor.#very minor or patch [A]describe beta, beta test, alpha, patch, release, etc.
-    public String version = "0.8.2 Beta-Test"; //not saving value or editable
+    public String version = "0.9.2 Beta-Test"; //not saving value or editable
 
     //clickerCounter
     public int count = 0;  //not editable or saved
-    public int highestCount0 = 0; //saves in save but not editable (can be toggled)
+    public int highestCount0 = converted4; //saves in save but not editable
 
     //clickerTimer
     public int count2 = 0; //not editable or saved
-    public int highestCount = 0; //saves in save but not editable (can be toggled)
+    public int highestCount = converted3; //saves in save but not editable
 
     public Timer timer;
     public long duration = converted2; //can be editable in config (can be editable)
