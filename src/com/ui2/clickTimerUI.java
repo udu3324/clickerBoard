@@ -4,14 +4,7 @@ import com.codebind.*;
 
 import javax.swing.*;
 import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.util.Scanner;
-import java.util.function.Consumer;
-import java.util.stream.Stream;
 
 public class clickTimerUI {
     public JPanel rootPanel;
@@ -85,6 +78,16 @@ public class clickTimerUI {
                     out.write("\r\n");
                     out.close();
                     System.out.println("Successfully wrote to the file.");
+                    if (save.saveClickerTimerAuto == 1) {
+                        try {
+                            FileWriter myWriter = new FileWriter("clickerSaves.txt", true);
+                            myWriter.write("# clickerTimer \n");
+                            myWriter.write("> User has scored a new high score of " + save.highestCount + " points in " + df.format(save.duration) + " time. \n");
+                            myWriter.close();
+                        } catch (IOException ioException) {
+                            ioException.printStackTrace();
+                        }
+                    }
                 } catch (IOException a) {
                     System.out.println("An error occurred.");
                     a.printStackTrace();

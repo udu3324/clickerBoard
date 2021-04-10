@@ -54,7 +54,7 @@ public class saveState {
 
     //these are default values. please do not edit them.
     //version format: #major.#minor.#very minor or patch [A]describe beta, beta test, alpha, patch, release, etc.
-    public String version = "0.9.2 Beta-Test"; //not saving value or editable
+    public String version = "0.10.0 Beta-Test"; //not saving value or editable
 
     //clickerCounter
     public int count = 0;  //not editable or saved
