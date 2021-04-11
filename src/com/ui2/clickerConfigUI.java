@@ -22,29 +22,30 @@ public class clickerConfigUI {
         saveState save = new saveState(); //load
         //change version to current one in saveState
         versionLabel.setText("v" + save.version);
+        //thank you, BryV1, for reporting a bug.
         System.out.println(save.duration);
         if (save.duration == 10000) {
-            comboBoxTime.setSelectedItem("1");
+            comboBoxTime.setSelectedIndex(0);
             System.out.println("comboBoxTime changed 1");
         }
         if (save.duration == 30000) {
-            comboBoxTime.setSelectedItem(2);
+            comboBoxTime.setSelectedIndex(1);
             System.out.println("comboBoxTime changed 2");
         }
         if (save.duration == 60000) {
-            comboBoxTime.setSelectedItem(3);
+            comboBoxTime.setSelectedIndex(2);
             System.out.println("comboBoxTime changed 3");
         }
         if (save.duration == 5000) {
-            comboBoxTime.setSelectedIndex(4);
+            comboBoxTime.setSelectedIndex(3);
             System.out.println("comboBoxTime changed 4");
         }
         if (save.duration == 3000) {
-            comboBoxTime.setSelectedItem(5);
+            comboBoxTime.setSelectedIndex(4);
             System.out.println("comboBoxTime changed 5");
         }
         if (save.duration == 1000) {
-            comboBoxTime.setSelectedItem(6);
+            comboBoxTime.setSelectedIndex(5);
             System.out.println("comboBoxTime changed 6");
         }
 
