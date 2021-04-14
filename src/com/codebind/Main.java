@@ -6,17 +6,16 @@ import java.awt.*;
 import java.io.*;
 
 //contributors
-//BryV1
+//udu3324 - founder of clickerTimer
+//BryV1 - bug finder
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException, InterruptedException, FileNotFoundException {
-        //create and write config and save
         {
             File myObj = new File("clickerConfig.txt");
             try {
                 if (myObj.createNewFile()) {
                     System.out.println("File created: " + myObj.getName());
-                    //writer
                     try {
                         BufferedWriter out = new BufferedWriter(new FileWriter(myObj, true));
                         out.write("# clickerBoard is by _._#3324/udu3324. \n");
@@ -51,7 +50,6 @@ public class Main {
             try {
                 if (myObj2.createNewFile()) {
                     System.out.println("File created: " + myObj2.getName());
-                    //writer
                     try {
                         BufferedWriter out = new BufferedWriter(new FileWriter(myObj2, true));
                         out.write("# clickerBoard is by _._#3324/udu3324. \n");
@@ -90,19 +88,19 @@ public class Main {
         startUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         startUI.pack();
         startUI.setLocationRelativeTo(null);
+        startUI.setResizable(false);
         startUI.setVisible(true);
         System.out.println("startUI loaded");
 
-        //info dialog (please don't remove)
         Thread.sleep(500);
         JOptionPane.showMessageDialog(null,
-                "Thank you for using ClickerBoard. (by udu3324) \n\n" +
+                "Thank you for using ClickerBoard! (by udu3324) \n\n" +
                         "If you appreciate it a lot, contribute by donating or contributing to the code. \n" +
-                        "(suggest new features, report program issues, creating pull requests, etc.) \n" +
-                        "If you want to know more about ClickerBoard or how it works, go to the \n" +
-                        "wiki page on the github repository.\n\n" +
-                        "This is a Beta Tester Version.\n" +
-                        "Please report all bugs and glitches!!!",
+                        "(suggest new features, report program issues/bugs, and other stuff.) \n" +
+                        "If you want to learn more about ClickerBoard or how it works, go to the \n" +
+                        "wiki page on the github repo. (press button in clickerConfig labeled Docs/Wiki)\n\n" +
+                        "This is a Beta Tester Version, Please report all bugs and glitches on the discord\n" +
+                        "or github.",
                 "ClickerBoard",
                 JOptionPane.INFORMATION_MESSAGE,
                 null);
