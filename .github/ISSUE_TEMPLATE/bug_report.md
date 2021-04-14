@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us squash the bugs in clickerBoard.
-title: "[Bug Report]"
+title: "[Bug Report] "
 labels: bug
 assignees: udu3324
 
