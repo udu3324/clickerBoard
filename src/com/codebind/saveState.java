@@ -1,6 +1,7 @@
 package com.codebind;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -54,7 +55,7 @@ public class saveState {
 
     //these are default values. please do not edit them.
     //version format: #major.#minor.#very minor or patch [A]describe beta, beta test, alpha, patch, release, etc.
-    public String version = "0.10.7 Beta-Test"; //not saving value or editable
+    public String version = "0.10.8 Beta-Test"; //not saving value or editable
 
     //clickerCounter
     public int count = 0;  //not editable or saved
@@ -70,6 +71,10 @@ public class saveState {
 
     //clickerConfig 1 = true | 0 = false
     public int saveClickerTimerAuto = converted1; //can be editable in config (can be editable)
+
+    //display size
+    Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+    public int height = (int)size.getHeight();
 
     public saveState() throws FileNotFoundException {
     }

@@ -88,6 +88,10 @@ public class Main {
         startUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         startUI.pack();
         startUI.setLocationRelativeTo(null);
+        int width1 = startUI.getX();
+        int height1 = startUI.getY();
+        int height11 = save.height;
+        startUI.setLocation( width1 , height11 );
         startUI.setResizable(false);
         startUI.setVisible(true);
         System.out.println("startUI loaded");
@@ -99,10 +103,15 @@ public class Main {
                         "(suggest new features, report program issues/bugs, and other stuff.) \n" +
                         "If you want to learn more about ClickerBoard or how it works, go to the \n" +
                         "wiki page on the github repo. (press button in clickerConfig labeled Docs/Wiki)\n\n" +
-                        "This is a Beta Tester Version, Please report all bugs and glitches on the discord\n" +
-                        "or github.",
+                        "Please report all bugs and glitches on the discord or github.",
                 "ClickerBoard",
                 JOptionPane.INFORMATION_MESSAGE,
                 null);
+
+        while (height11 > height1) {
+            Thread.sleep(2);
+            startUI.setLocation( width1 , (height11 - 1) );
+            height11 = height11 - 1;
+        }
     }
 }

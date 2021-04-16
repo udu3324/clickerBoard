@@ -22,7 +22,7 @@ public class startUI {
     int toggle2 = 1;
     int toggle3 = 1;
 
-    public startUI() throws FileNotFoundException {
+    public startUI() throws FileNotFoundException, InterruptedException {
         saveState save = new saveState(); //load
 
         //change version to current one in saveState
@@ -79,7 +79,6 @@ public class startUI {
                 toggle3 = 1;
             }
         });
-
         clickerCounterButton.addActionListener(e -> {
             //toggle visible code
             if (toggle1 == 0) {
