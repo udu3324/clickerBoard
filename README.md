@@ -19,7 +19,7 @@
 
 ## About
 clickerBoard is by udu3324. It's a program to measure your clicks or generally have fun with. It's a simple strategic game, get the most clicks! You could challenge your friends to see who can click the most, or have it open to practice how fast you can click.         
-
+![enter image description here](https://i.imgur.com/T362DoT.gif)          
 ## Documentation
 Need help on getting started on clickerBoard? You can click [here](https://github.com/udu3324/clickerBoard/wiki/clickerBoard-Introduction) and find where to **download** it, how to **run/compile** it, how the program **works**, and **more**.           
 
