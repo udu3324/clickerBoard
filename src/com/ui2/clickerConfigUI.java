@@ -108,7 +108,7 @@ public class clickerConfigUI {
         clickerRefer.addActionListener(e -> {
             if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
                 try {
-                    Desktop.getDesktop().browse(new URI("https://github.com/udu3324/clickerBoard/wiki/clickerBoard-Introduction"));
+                    Desktop.getDesktop().browse(new URI("https://github.com/udu3324/clickerBoard/wiki"));
                 } catch (IOException | URISyntaxException ioException) {
                     ioException.printStackTrace();
                 }

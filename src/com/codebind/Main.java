@@ -103,7 +103,7 @@ public class Main {
                         "(suggest new features, report program issues/bugs, and other stuff.) \n" +
                         "If you want to learn more about ClickerBoard or how it works, go to the \n" +
                         "wiki page on the github repo. (press button in clickerConfig labeled Docs/Wiki)\n\n" +
-                        "Please report all bugs and glitches on the discord or github.",
+                        "Please report all bugs/glitches via github issues.",
                 "ClickerBoard",
                 JOptionPane.INFORMATION_MESSAGE,
                 null);
